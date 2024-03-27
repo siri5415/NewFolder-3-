@@ -1,0 +1,484 @@
+Cascading style sheets(CSS).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Selector - The element that style applied to.
+~~~~~~~
+Property - Style name
+~~~~~~~
+Value - value of a style.
+~~~~~
+
+Property 1 : Value 1:
+Property 2 : Value 2:
+Example :
+h1{
+border:1px dashed green;
+color:red;
+}
+
+3ways of CSS Implementation:
+
+(1)Inline Style Sheets:
+   ~~~~~~~~~~~~~~~~
+Style applied to one line or one tag.
+
+
+Syntax:
+~~~~~~
+<selector-tag style="property:value;roperty:value;>
+
+Example:
+~~~~~~~
+<h1 style="color:red;background color:Yellow">
+
+
+(2)Internal style sheets:
+   ~~~~~~~~~~~~~~~~~~~~~
+Style applied to one entire web page.
+
+(3)External style sheets:
+   ~~~~~~~~~~~~~~~~~~~~~
+Style applied to one or more web pages.
+
+*******UNIT:10
+~~~~~~~~~~~~~~
+
+
+CSS Associates style rules with html elements:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CSS works by associating rules with html elements.
+these rules govern how the content of specified elements should be displayed.
+A CSS rulecontaines two parts:a selector and a declaration.
+[p{]->selector
+
+     font-family: Arial;}->Declarartion
+Selectors:
+~~~~~~~~~
+Indicate which element the rule applies to.
+The same rule can apply to more than one element if you seperate the 
+element names with commas.  
+Declaration:
+~~~~~~~~~~~
+Indicate how the elements refered to in the selector should be styled.
+Declarations are split into two parts (a property and a value),and are
+separated by a colon.
+
+
+CSS Properties affect how elements are displayed:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Properties:
+~~~~~~~~~~
+Indicate the aspects of the elements you want to change.
+for example,color,font,width,height and border.
+values:
+~~~~~~
+Specify the settings you want to use for the chosen properties.for example,
+if you want to specify a color property then the value is the color you want 
+the text in these elementsto be.   
+
+USING EXTERNAL CSS:
+~~~~~~~~~~~~~~~~~~
+<link>:
+~~~~~~
+The <link> element can be used in an HTML document to tell the brower where to find the CSS
+file used to style the page.it is an empty element(Meaning it does not need a closing tag).
+it lives inside the <head>element.It should use three attribute.
+href:
+~~~~
+This specifies the path to the CSS file(Which is often placed in a floder called CSS or style).
+Type:
+~~~~
+The attribute specifies the type of document being linked to the valuer should be text/CSS.
+relationship:
+~~~~~~~~~~~~
+This is specifies the relationship bewteen the html page and the files it is linked to.
+the value should be stylesheet when linking to a CSS files.
+
+
+USING INTERNAL CSS:
+~~~~~~~~~~~~~~~~~~
+<Style>:
+~~~~~~~
+Allows all pages to use the same style rules(rather than repeating them in each page).
+Keeps the content separate form how the page looks.
+Means you can change the style used across all pages by altering just one file.
+rather than each individual page.
+
+
+CSS SELECTOR:
+~~~~~~~~~~~~
+There are many different types of CSS selector that allow you to target rules to specific
+elements in an HTML document.
+*UNIVERSAL SELECTOR:
+~~~~~~~~~~~~~~~~~~
+*{}
+*TYPE SELECTOR:
+~~~~~~~~~~~~~~
+h1,h2,h3{}
+*CLASS SELECTOR:
+~~~~~~~~~~~~~~
+.Note{}
+p.note{}
+ID SELECTOR:
+~~~~~~~~~~~
+#INTRODUCTION{}
+child selector:
+~~~~~~~~~~~~~~
+<li><a> {}
+DESCEDANT SELECTOR:
+~~~~~~~~~~~~~~~~~~
+p a{}
+ADJACENT SIBLING SELECTOR:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+h1+p{}
+GENERAL SIBLING SELECTOR:
+~~~~~~~~~~~~~~~~~~~~~~~~
+h1~p{}
+
+
+
+How CSS Rules Cascade:
+~~~~~~~~~~~~~~~~~~~~~
+LAST RULE:
+~~~~~~~~~~
+If the two selectors are identical,the latter of the two will taake precedence.
+Here you can see the second i selector takes precedence over the first.
+SPECIFICYITY:
+~~~~~~~~~~~~
+IF one selector is more specefic than the others,the more specific rule will
+ take precedence over more general ones.In this example:
+h1 is more specific than p*
+p bis more specific than p
+p#intro is more specific than p
+IMPORTANT:
+~~~~~~~~~
+YOU can add!important after any property value to  indicate that is should be considered
+more important than ofter rules that apply to the same element.
+
+
+
+INHERITANCE:
+~~~~~~~~~~~~
+IF YOU specify the font-family or color properties on the <BODY>element,they will apply
+to most child elements.this is because the value of the font-family property is inherted
+by child elements.
+You can compare this with the background-color or border properties;
+they are not inherited by child elements.
+
+******UNIT:11
+~~~~~~~~~~~~~
+
+FOREGROUND COLOR:
+~~~~~~~~~~~~~~~~
+COLOR:
+~~~~~
+THE color property allows you to specify the color of text insides an element.
+you can specify any color in CSS in one of the three ways:
+HEX CODES:
+~~~~~~~~~~~
+THESE are six-digit codes that represent the amount of red,green,and the pink ina color,
+preceded by a pound or hash(#)sign. for example:#ee3e80
+RGB VALUES:
+~~~~~~~~~~~
+THESE express color in terms of how much red,greemand pink are used to make it up.
+for:rgb(100,100,90)
+COLOR NAMES:
+~~~~~~~~~~~
+THERE ARE 147 predenfined color names that are recognized by browers .
+for example:(Darkcyan)
+
+
+
+
+BACKGROUND_COLOR:
+~~~~~~~~~~~~~~~~
+CSS treats each html element as if it appears in a box,and the background-color
+property sets the color of the background for that box.
+
+
+CSS3:OPACITY:Opacity,rgba
+~~~~~~~~~~~~~~~~~~~~~~~~~
+CSS3 introduces the opacity property which allows you to specify the opacity an of element
+and any of its child elements.
+these values is a number bewteen 0.0 and 1.0(so a value of 0.5 is 50% opacity and 0.15
+is 15% opacity)
+
+
+
+CSS3:HSL&HSLA:hsl,hsla
+~~~~~~~~~~~~~~~~~~~~~~
+The hsl colr prorerty ha s been introduced in CSS3 as an alternative way to specify color.
+the value of the property starts with letters hsl,followed by induvidual values inside parenthesefor:
+
+HUE:
+~~~~ 
+This is expressed as an angle (bewteen 0 and 360 degree).
+
+SATURATION:
+~~~~~~~~~~
+This is expressed as an percetanges.
+
+LIGHTNESS:
+~~~~~~~~~~
+This is expressed as a percetange with 0% being white 50% being normal,and 100%
+being black.
+
+ALPHA:
+~~~~~~
+This is as a number bewteen 0 and 1.0. 
+~~~~~~~~~~~
+
+
+
+ ****TEXT:
+~~~~~~~~~~
+SPECIFYING TYPEFACES:
+~~~~~~~~~~~~~~~~~~~~
+The fon-family property allows you to specify the typespace that should be used for
+any text inside the element(S)to which a CSS rule applies.
+The value of this property is the name of the typeface you want to use.
+
+
+Size of type:
+~~~~~~~~~~~~~
+font-size:
+~~~~~~~~~
+The font-size property enables you to specify a size for the font.there are several ways to specify 
+the size of a font.the most common are:
+Pixels:
+~~~~~~
+Pixels are commonly used because they allow web designers very precise control over how much 
+space their text takes up.the number of pixels is followed by the letters px.
+Percentages:
+~~~~~~~~~~~
+The default size of text in browers is 16px. so a size of 75% would be the equivalent of 
+12px,and 200% would be 32px.
+EMS:
+~~~~
+An em is equivalent to the width of a element.
+We will look at these measurements in greater detail on the next page.
+
+More Font Choice:
+~~~~~~~~~~~~~~~~
+Font-family :
+~~~~~~~~~~~
+The specifies the name of the font.This ma,e can then be  used as a value of the 
+font-family property in the rest of the style sheet.(as shown in the rule for the <h1>
+and<h2>elements).
+SOURCE:
+~~~~~~~
+This specifies the path to the font.In order for this techinque to work in all browers,
+you will probably need to specify paths to a few different versions of the font,as shown
+on the next page.
+Format:
+~~~~~~~
+This specifies the format that the font is supplied in.
+(It's discussed in detail on the next page.) 
+
+
+Understanding font Formats:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+This various font formats should appear in your code in this order:
+1.eot
+2.woff
+3.ttf/otf
+4.svg
+
+BOLD:
+~~~~
+FONT-FAMILY:
+~~~~~~~~~~~~
+The font-weight property allows you to create bold text.
+There are two values that this property commonly takes:
+Normal:
+~~~~~~
+This causes text to appear at a normal weight.
+Bold:
+~~~~
+This causes text to appear bold.
+In this example,you can see that the element whose class attribute has a value of
+credits has been bolded.
+
+
+Italic:
+~~~~~~~
+font-style:
+~~~~~~~~~~~
+Normal:
+~~~~~~
+This causes text to appear at a normal style(as opposed to italic or oblique).
+Italic:
+~~~~~~~
+This causes text to appear italic.
+Oblique:
+~~~~~~~~
+This causes text to appear oblique.
+In this example,you can see that the credits have been italized.
+
+
+UNDERLINE&STRIKE:
+~~~~~~~~~~~~~~~~
+Text-Decoration:
+~~~~~~~~~~~~~~~~
+The decoration property allows you to specify the following values:
+None:
+~~~~
+This removes any decoration already applied to the text.
+Underline:
+~~~~~~~~~
+This adds a line underneath the text.
+Overline:
+~~~~~~~~
+This adds a line over the top of the text. 
+Line-through:
+~~~~~~~~~~~~
+This adds a line through words.
+blink:
+~~~~~
+This animates the text to make it flash on and off(however this is
+generally frowed upon,as it is considered rather annoying).
+
+Leading:
+~~~~~~~
+line-height:
+~~~~~~~~~~~~
+Leading(pronounced ledding)is aterm typographers use for the vertical space bewteen
+lines of text.In a typeface ,the part of a letter that drops beneath the baseline
+is called a descender.
+While the highest point of a letter is called the ascender.leading is measured 
+form the bottom of the decender on one line to the top of the ascender on the next.
+
+Letter&Word spacing:
+~~~~~~~~~~~~~~~~~~~
+Letter-spacing,word-spacing:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Kerning is the term typographers use for the space bewteen each letter.you can 
+control the space bewteen each letter -spacing property. 
+
+
+
+Alignment:
+~~~~~~~~~
+text-align:
+~~~~~~~~~~
+The text-align property allows you to control the alignment of text.
+the property can take one of four values.
+Left:
+~~~~~
+This indicates that the text shoulds be left-aligned.
+Right:
+~~~~~
+This indicates that the text should be right-aligned.
+Center:
+~~~~~~~
+This allows you to center text.
+Justify:
+~~~~~~~~
+This indicates that every line in a paragraph, except the last line,
+should be set to take up the full width of the containing box.
+
+
+Vertical Alignment:
+~~~~~~~~~~~~~~~~~~
+vertical-align:
+~~~~~~~~~~~~~~
+The vertical-align property is a common source of confusion.
+It is not intended to allow you to vertically align text in the 
+middle of block level elements such as a <p>and<div>,although it
+does have this effect when used with table cells are(<td>and<th>
+elements).
+Base line
+Sub script
+Super script
+Top
+Text-top
+middle
+bottom
+text-bottom
+It can also take a lenght(usually specified in pixels or ems)
+or a percentage of the line height.
+
+Indenting Text:
+~~~~~~~~~~~~~~~
+Text-indent:
+~~~~~~~~~~~
+The text-indent property allows you to indent the first line of text
+within an element.the amount you want the line indented by can be specified 
+in a number of ways but is usually given in pixels in ems.
+
+CSS3: Drop Shadow:
+~~~~~~~~~~~~~~~~~
+text-shadow:
+~~~~~~~~~~~
+The text-shadow property has become commonly used despite lacking
+support in all browsers.
+
+First Letter OR LINE:
+~~~~~~~~~~~~~~~~~~~~~
+:FIRST-Letter;:First-line:
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can specify different values for the first letter or first line of
+text inside an element using 
+:first-letter and
+:first-line
+Technically these are not properties.
+there are known as pseudo-elements.
+
+
+STYLING LINKS:
+~~~~~~~~~~~~~
+:LINK,:VISITED:
+~~~~~~~~~~~~~~~
+In CSS,there are two pseudo-classes that allows you to set different
+styles for links that havea and have not yet been visited.
+:LINK:
+~~~~~
+This allows you to set styles for links that have not yet been visited.
+:Visited:
+~~~~~~~~~
+This allows you to set styles for links that have been clicked on. 
+
+Responding to users:
+~~~~~~~~~~~~~~~~~~~~
+:hover;:active;:focus
+
+There are three element pseudo-classes that allows to change the apperence of the elements
+when a user is interacting with them.
+:hover:
+~~~~~~~
+This applied when a user hovers over an element with a pointing device as a mouse.
+
+:Active:
+~~~~~~~
+This is applied when an elememnt has focus.any element that you can interact with such as
+link you can click on or any form control can have focus.
+
+
+**********UNIT:13:
+~~~~~~~~~~~~~~~~~
+BOX DIMENSIONS:
+~~~~~~~~~~~~~~~
+Width,height:
+~~~~~~~~~~~~~
+By default a box is sized just big enough to hold its contents.To set your own dimensions
+for a box you can use the height and width properties. 
+
+Limiting width:
+~~~~~~~~~~~~~~~
+Min-width,Max-width:
+~~~~~~~~~~~~~~~~~~~
+Some page designs expand and shrink to fit the size of the user's screen.
+In such designs,the min-width property specifies the smallest size box can be
+
+*******Layouts:
+~~~~~~~~~~~~~~
+
+<header> - Defines a header for a document or a section
+<nav> - Defines a set of navigation links
+<section> - Defines a section in a document
+<article> - Defines an independent, self-contained content
+<aside> - Defines content aside from the content (like a sidebar)
+<footer> - Defines a footer for a document or a section
+<details> - Defines additional details that the user can open and close on demand
+<summary> - Defines a heading for the <details> element
+

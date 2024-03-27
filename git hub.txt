@@ -1,0 +1,20 @@
+ *Github is a web-based platform used for version control.
+ *It simplifies the process of working with other people and makes it esay to 
+   collabrate on projects.
+ *Now if you want to pull your code to github.
+ *Git remote add origin url.
+ *Git push origin branch-name.
+ *Go to github and check the files that you have pushed.  
+
+
+
+
+(1)What is the github?
+
+->Github is an hosting service platform.
+->On git we can able to store any type of files by creating a repository.
+->Github encourages teams to work together to bulid and edit their site content.
+
+(2)Create and clone the repository?
+
+->
